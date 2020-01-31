@@ -30,6 +30,7 @@ public:
 };
 
 class hero : public character {
+    friend class bag; //le sac doit avoir accès à la position de son propriétaire 
 public:
     bag b; //le héro a un sac à dos
 };
