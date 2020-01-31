@@ -11,7 +11,9 @@ class item{
     int obj_x;
     int obj_y;
     protected:
-        
+    void use (){
+
+    }
 };
 
 //class gold :public item{};
@@ -19,7 +21,7 @@ class item{
 
 //De cette classe dériveront les différentes armes et armures 
 class weapons : public item{
-
+    
 };
 
 //de cette classe dériveront les potions qui redonnent de la vie et que augmentent la défense 
@@ -31,11 +33,22 @@ class potions :public item{
 
 
 class bag{
-    int nombre_max = 20 ; //le nombre maximal d'objets que le héros peut porter dans son sac à dos 
+    int size_max = 20 ; //le nombre maximal d'objets que le héros peut porter dans son sac à dos 
     protected :
-    int nombre; //le nombre d'objets que notre héros à dans son sac
+    int size; //le nombre d'objets que notre héros à dans son sac
     std::vector<item*>items;
-
-
+    void add(item voisin){
+        if (size<size_max){
+            items.push_back(& voisin);
+            size ++; //on augmente le nombre d'item dans le sac 
+        }
+        else{
+            //////il faudra afficher sur l'interface que le sac est plein, je ne sais pas faire pour l'instant 
+        }
+    }
+    void drop(item selected){
+        items.drop
+    }
+    
 };
 
