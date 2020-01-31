@@ -1,4 +1,5 @@
 #include <string>
+#include <iostream>
 
 class character {
 protected:
@@ -12,16 +13,16 @@ public:
     character (std::string nm, int x, int y ) : name(nm), life(100.0), attack(0.0), defense(0.0), xpos(x), ypos(y) {}
     void move (int i){
         if (i==1){
-            if (true){xpos ++ ;}
+            xpos ++ ;
             } // se déplacer vers la droite
         if (i==2){
-            if (true) {xpos -- ;} 
+            xpos -- ; 
             } // se déplacer vers la gauche
         if (i==3){
-            if (true) {ypos ++ ;}
+            ypos ++ ;
             } // se déplacer vers le haut
         if (i==4){
-            if(true){ypos -- ;}
+            ypos -- ;
             } // se déplacer vers le bas
     }
     void hit (character c){
@@ -29,7 +30,14 @@ public:
     }
 };
 
+
+
 class hero : public character {
 public:
     bag b; //le héro a un sac à dos
 };
+
+int main (){
+    character c=character ("Augu",1,1);
+    std::cout<<c.life<<std::endl;
+}
