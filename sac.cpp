@@ -46,9 +46,8 @@ class bag{
             //////il faudra afficher sur l'interface que le sac est plein, je ne sais pas faire pour l'instant 
         }
     }
-    void drop(item selected){
-        items.drop
-    }
-    
+    void drop(const_iterator pos ){
+        items.erase(pos);
+    }   
 };
 
